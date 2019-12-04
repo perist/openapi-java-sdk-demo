@@ -44,15 +44,17 @@ public class DefaultApiComposeCallback implements ApiComposeCallback {
 
   @Override
   public void optionChange(JSONObject jsonObject) {
-
+    System.out.println("optionChange:" + jsonObject.toJSONString());
   }
 
-  @Override public void futureChange(JSONObject jsonObject) {
-
+  @Override
+  public void futureChange(JSONObject jsonObject) {
+    System.out.println("futureChange:" + jsonObject.toJSONString());
   }
 
-  @Override public void askBidChange(JSONObject jsonObject) {
-
+  @Override
+  public void askBidChange(JSONObject jsonObject) {
+    System.out.println("askBidChange:" + jsonObject.toJSONString());
   }
 
   @Override
