@@ -30,8 +30,8 @@ import java.util.Arrays;
 import java.util.List;
 import org.junit.Test;
 
-import static com.tigerbrokers.stock.openapi.demo.DemoConstants.serverUrl;
 import static com.tigerbrokers.stock.openapi.demo.DemoConstants.tigerId;
+import static com.tigerbrokers.stock.openapi.demo.DemoConstants.tigerPubKey;
 import static com.tigerbrokers.stock.openapi.demo.DemoConstants.yourPrivateKey;
 
 /**
@@ -40,7 +40,7 @@ import static com.tigerbrokers.stock.openapi.demo.DemoConstants.yourPrivateKey;
  */
 public class QuoteV2Demo {
 
-  private static TigerHttpClient client = new TigerHttpClient(serverUrl, tigerId, yourPrivateKey);
+  private static TigerHttpClient client = new TigerHttpClient(tigerId, yourPrivateKey, tigerPubKey);
 
   @Test
   public void market_state() {
@@ -130,7 +130,7 @@ public class QuoteV2Demo {
     symbols.add("AAPL");
     QuoteContractResponse response = client.execute(QuoteContractRequest.newRequest(symbols, SecType.WAR));
     if (response.isSuccess()) {
-      System.out.println(response.getContractItem());
+      System.out.println(response.getContractItems());
     } else {
       System.out.println("response error:" + response.getMessage());
     }

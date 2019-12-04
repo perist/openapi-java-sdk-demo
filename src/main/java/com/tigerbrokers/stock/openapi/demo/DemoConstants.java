@@ -7,17 +7,12 @@ package com.tigerbrokers.stock.openapi.demo;
 public final class DemoConstants {
 
   /**
-   * 线上http接口地址
-   */
-  public static String serverUrl = "https://openapi.itiger.com/gateway";
-
-  /**
    * 线上消息推送接口地址
    */
   public static String webSocketServerUrl = "wss://openapi.itiger.com:8883";
 
   /**
-   * 参数必填,tigerId : 形如2015xxxx,查询地址：https://www.itiger.com/openapi/info
+   * TODO 参数必填,tigerId : 形如2015xxxx,查询地址：https://www.itiger.com/openapi/info
    */
   public static String tigerId = "";
 

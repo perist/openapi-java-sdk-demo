@@ -2,7 +2,6 @@ package com.tigerbrokers.stock.openapi.demo;
 
 import com.alibaba.fastjson.JSONObject;
 import com.tigerbrokers.stock.openapi.client.socket.ApiComposeCallback;
-import com.tigerbrokers.stock.openapi.client.socket.WebSocketClient;
 import com.tigerbrokers.stock.openapi.client.struct.SubscribedSymbol;
 
 /**
@@ -48,6 +47,14 @@ public class DefaultApiComposeCallback implements ApiComposeCallback {
 
   }
 
+  @Override public void futureChange(JSONObject jsonObject) {
+
+  }
+
+  @Override public void askBidChange(JSONObject jsonObject) {
+
+  }
+
   @Override
   public void subscribeEnd(JSONObject jsonObject) {
     System.out.println("subscribe end:" + jsonObject.toJSONString());
@@ -61,10 +68,6 @@ public class DefaultApiComposeCallback implements ApiComposeCallback {
   @Override
   public void getSubscribedSymbolEnd(SubscribedSymbol subscribedSymbol) {
     System.out.println(JSONObject.toJSONString(subscribedSymbol));
-  }
-
-  @Override
-  public void client(WebSocketClient client) {
   }
 
   @Override
@@ -83,7 +86,23 @@ public class DefaultApiComposeCallback implements ApiComposeCallback {
   }
 
   @Override
-  public void connectAck() {
-    System.out.println("connect ack.");
+  public void connectionAck() {
+    System.out.println("connect success.");
+  }
+
+  @Override
+  public void connectionAck(int serverSendInterval, int serverReceiveInterval) {
+    System.out.println(
+        "connect success,send interval:" + serverReceiveInterval + ",receive interval:" + serverReceiveInterval);
+  }
+
+  @Override
+  public void hearBeat(String heartBeatContent) {
+
+  }
+
+  @Override
+  public void serverHeartBeatTimeOut(String channelIdAsLongText) {
+
   }
 }
