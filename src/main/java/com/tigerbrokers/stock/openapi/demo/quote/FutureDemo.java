@@ -24,8 +24,8 @@ import java.util.Arrays;
 import java.util.List;
 import org.junit.Test;
 
+import static com.tigerbrokers.stock.openapi.demo.DemoConstants.serverUrl;
 import static com.tigerbrokers.stock.openapi.demo.DemoConstants.tigerId;
-import static com.tigerbrokers.stock.openapi.demo.DemoConstants.tigerPubKey;
 import static com.tigerbrokers.stock.openapi.demo.DemoConstants.yourPrivateKey;
 
 /**
@@ -34,7 +34,7 @@ import static com.tigerbrokers.stock.openapi.demo.DemoConstants.yourPrivateKey;
  */
 public class FutureDemo {
 
-  private static TigerHttpClient client = new TigerHttpClient(tigerId, yourPrivateKey, tigerPubKey);
+  private static TigerHttpClient client = new TigerHttpClient(serverUrl, tigerId, yourPrivateKey);
 
   @Test
   public void get_future_exchange() {

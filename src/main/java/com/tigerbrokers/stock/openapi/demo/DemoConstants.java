@@ -7,18 +7,23 @@ package com.tigerbrokers.stock.openapi.demo;
 public final class DemoConstants {
 
   /**
+   * 线上http接口地址
+   */
+  public static String serverUrl = "https://openapi.itiger.com/gateway";
+
+  /**
    * 线上消息推送接口地址
    */
   public static String webSocketServerUrl = "wss://openapi.itiger.com:8883";
 
   /**
-   * TODO 参数必填,tigerId : 形如2015xxxx,查询地址：https://www.itiger.com/openapi/info
+   * 参数必填,tigerId : 形如2015xxxx,查询地址：https://www.itiger.com/openapi/info
    */
   public static String tigerId = "";
 
   /**
    * 参数必填,yourPrivateKey : 开发者注册时生成的私钥
-   * 生成方式 : https://openapi.itiger.com/docs/intro/contract/#rsa
+   * 生成方式 : https://quant.itiger.com/openapi/java-docs/zh-cn/docs/intro/quickstart.html
    * 如果报错,可以比对下下面的私钥实例 testPrivateKey 或者 testPrivateKey1(去除了头尾、换行和空格)
    */
   public static String yourPrivateKey = "";
