@@ -1,7 +1,7 @@
 # openapi-java-sdk-demo
 
 ## 说明
-运行前需要注册在老虎证券开户入金，然后需要注册开发者信息，才能使用此功能。
+运行前需要在老虎证券开户入金，然后注册成为开发者，才能使用此功能。
 开发者信息注册说明：
 https://quant.itiger.com/openapi/java-docs/zh-cn/docs/intro/quickstart.html
 
