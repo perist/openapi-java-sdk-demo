@@ -19,14 +19,27 @@ public final class DemoConstants {
   /**
    * 参数必填,tigerId : 形如2015xxxx,查询地址：https://www.itiger.com/openapi/info
    */
-  public static String tigerId = "";
+  public static String tigerId = "20150648";
 
   /**
    * 参数必填,yourPrivateKey : 开发者注册时生成的私钥
    * 生成方式 : https://quant.itiger.com/openapi/java-docs/zh-cn/docs/intro/quickstart.html
    * 如果报错,可以比对下下面的私钥实例 testPrivateKey 或者 testPrivateKey1(去除了头尾、换行和空格)
    */
-  public static String yourPrivateKey = "";
+  public static String yourPrivateKey = "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAL6tBYKXNlgJPNh6\n" +
+          "COhEgqWHGjlbyQgImv9QF9Q0G/vNZsaMevaeLK9nEHZFQgEyiwfuYZlhmRDaQ8wM\n" +
+          "kpw+1dFbpW+zkjlGD7w4Pc8bnHVIvyzkRcve4cOKTQ+93fJ/5zXYfIpZPzD/ICt5\n" +
+          "Qj6zbLtdiSMrgyBd0LAAruXLisJHAgMBAAECgYEAj9BENakDTgc5ozT3/uedemeZ\n" +
+          "+eUmjS6gaSzprB3ZdWQIvnw6SkQnA+zCV9II5IpQnpzHdD5Oio11UTOyaLJj5YQQ\n" +
+          "kOBW8rlmjrR/HkpytSEsesyOrbXHIv3Y3GlUmfMOkU9S9A4GllhjS8pONlJeBUD6\n" +
+          "tNE2jG7LLR6RUglWtfECQQDtOfeSgyb4pyWXcekHno9K9xR79eBNIkJ6w4fkybTD\n" +
+          "NVdin7qsxSVsbZHiSupwcMh/IyZpJiOBOgAkRP+KFc3FAkEAzcP5ZLANIcNoUnBB\n" +
+          "t+HvC39sVWlRG3RSOgmGLegRUsqE8khPhLq9Z+kH39CDoExhlMNTN/OTS6ZmjuQ5\n" +
+          "qnk8mwJAEmCcOkBow3iHY/0SFWIGLcOIVbYNg0w1JDeDjojFtR2rwFspZfr71DOE\n" +
+          "yqgNE1rZXWgGsLygoYExw52IwlTAFQJAJVZORsr7VwkSQQNFqYxByCBTFByMLyMo\n" +
+          "WIep5WKa4h8FiME+TKNmAxjx6Nb5S3kQq+HVk+2K6MtFCOC45gohyQJAaxNmMpy+\n" +
+          "raGoHFKbd1IDBI8b5YWdJtfzbgFG9eYZgsdfPJYtBpsZznsOMmG+nxK/bODnwrYE\n" +
+          "ZgOZejLwqSh+Qw==";
 
   public static String testPrivateKey = "-----BEGIN PRIVATE KEY-----\n"
       + "MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAKTzk6nb3/T+1R7D\n"
