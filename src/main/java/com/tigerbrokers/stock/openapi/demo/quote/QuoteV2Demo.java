@@ -1,38 +1,19 @@
 package com.tigerbrokers.stock.openapi.demo.quote;
 
 import com.tigerbrokers.stock.openapi.client.https.client.TigerHttpClient;
-import com.tigerbrokers.stock.openapi.client.https.request.quote.QuoteContractRequest;
-import com.tigerbrokers.stock.openapi.client.https.request.quote.QuoteKlineRequest;
-import com.tigerbrokers.stock.openapi.client.https.request.quote.QuoteMarketRequest;
-import com.tigerbrokers.stock.openapi.client.https.request.quote.QuoteRealTimeQuoteRequest;
-import com.tigerbrokers.stock.openapi.client.https.request.quote.QuoteShortableStockRequest;
-import com.tigerbrokers.stock.openapi.client.https.request.quote.QuoteStockTradeRequest;
-import com.tigerbrokers.stock.openapi.client.https.request.quote.QuoteSymbolNameRequest;
-import com.tigerbrokers.stock.openapi.client.https.request.quote.QuoteSymbolRequest;
-import com.tigerbrokers.stock.openapi.client.https.request.quote.QuoteTimelineRequest;
-import com.tigerbrokers.stock.openapi.client.https.request.quote.QuoteTradeTickRequest;
-import com.tigerbrokers.stock.openapi.client.https.response.quote.QuoteContractResponse;
-import com.tigerbrokers.stock.openapi.client.https.response.quote.QuoteKlineResponse;
-import com.tigerbrokers.stock.openapi.client.https.response.quote.QuoteMarketResponse;
-import com.tigerbrokers.stock.openapi.client.https.response.quote.QuoteRealTimeQuoteResponse;
-import com.tigerbrokers.stock.openapi.client.https.response.quote.QuoteShortableStockResponse;
-import com.tigerbrokers.stock.openapi.client.https.response.quote.QuoteStockTradeResponse;
-import com.tigerbrokers.stock.openapi.client.https.response.quote.QuoteSymbolNameResponse;
-import com.tigerbrokers.stock.openapi.client.https.response.quote.QuoteSymbolResponse;
-import com.tigerbrokers.stock.openapi.client.https.response.quote.QuoteTimelineResponse;
-import com.tigerbrokers.stock.openapi.client.https.response.quote.QuoteTradeTickResponse;
+import com.tigerbrokers.stock.openapi.client.https.request.quote.*;
+import com.tigerbrokers.stock.openapi.client.https.response.quote.*;
 import com.tigerbrokers.stock.openapi.client.struct.enums.KType;
 import com.tigerbrokers.stock.openapi.client.struct.enums.Market;
 import com.tigerbrokers.stock.openapi.client.struct.enums.RightOption;
 import com.tigerbrokers.stock.openapi.client.struct.enums.SecType;
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import org.junit.Test;
 
-import static com.tigerbrokers.stock.openapi.demo.DemoConstants.serverUrl;
-import static com.tigerbrokers.stock.openapi.demo.DemoConstants.tigerId;
-import static com.tigerbrokers.stock.openapi.demo.DemoConstants.yourPrivateKey;
+import static com.tigerbrokers.stock.openapi.demo.DemoConstants.*;
 
 /**
  * Description:
@@ -54,7 +35,8 @@ public class QuoteV2Demo {
 
   @Test
   public void all_symbols() {
-    QuoteSymbolResponse response = client.execute(QuoteSymbolRequest.newRequest(Market.US));
+    QuoteSymbolRequest request = QuoteSymbolRequest.newRequest(Market.US);
+    QuoteSymbolResponse response = client.execute(request);
     if (response.isSuccess()) {
       System.out.println(Arrays.toString(response.getSymbols().toArray()));
     } else {

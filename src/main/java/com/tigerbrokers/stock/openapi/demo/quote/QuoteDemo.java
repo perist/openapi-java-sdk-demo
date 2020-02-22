@@ -9,13 +9,12 @@ import com.tigerbrokers.stock.openapi.client.struct.enums.Language;
 import com.tigerbrokers.stock.openapi.client.struct.enums.Market;
 import com.tigerbrokers.stock.openapi.client.struct.enums.TimeLineType;
 import com.tigerbrokers.stock.openapi.client.util.builder.QuoteParamBuilder;
-import java.util.ArrayList;
-import java.util.List;
 import org.junit.Test;
 
-import static com.tigerbrokers.stock.openapi.demo.DemoConstants.serverUrl;
-import static com.tigerbrokers.stock.openapi.demo.DemoConstants.tigerId;
-import static com.tigerbrokers.stock.openapi.demo.DemoConstants.yourPrivateKey;
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.tigerbrokers.stock.openapi.demo.DemoConstants.*;
 
 /**
  * Description:
@@ -55,8 +54,8 @@ public class QuoteDemo {
     TigerHttpRequest request = new TigerHttpRequest(ApiServiceType.ALL_SYMBOL_NAMES);
 
     String bizContent = QuoteParamBuilder.instance()
-        .market(Market.HK)
-        .language(Language.en_US)
+        .market(Market.ALL)
+        .language(Language.zh_CN)
         .buildJson();
     request.setBizContent(bizContent);
 
@@ -141,7 +140,6 @@ public class QuoteDemo {
         .period(KType.week)
         .beginTime("2018-07-02")
         .limit(20)
-        .right("br")
         .buildJson();
     request.setBizContent(bizContent);
 
